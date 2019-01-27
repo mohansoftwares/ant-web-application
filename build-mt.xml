@@ -3,7 +3,7 @@
 
 	<property file="./build.properties" />
 	
-	<target name="init" depends="prepare,compile,war" description="Clean work dires, then compile and create a WAR then create the EAR">
+	<target name="init" depends="prepare,compile,war" description="Clean work dirs, then compile and create a WAR then create the EAR">
 		<echo> Build completed for ${project.name} </echo>
 	</target>
 	
@@ -15,7 +15,7 @@
 		<pathelement path="${work.home}"/>
 	</path>
 
-	<target name="prepare"  description="Create working dires and copy static files to work dir">
+	<target name="prepare"  description="Create working dirs and copy static files to work dir">
 		<mkdir  dir="${dist.home}"/>
 		<mkdir  dir="${work.home}/WEB-INF/classes"/>
 		<mkdir  dir="${war.home}"/>
